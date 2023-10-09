@@ -24,7 +24,8 @@ Até o final de 2017, mais de 340 mil pessoas, das quais cerca de 100 mil eram c
 
 Durante três anos, Aylan Kurdi sobreviveu às bombas e à guerra, mas morreu afogado no Mediterrâneo, antes de conseguir alcançar a Europa. Vestido com uma camisetinha vermelha e um shortinho azul, ocupa o centro semântico da fotografia que se transformou no símbolo do drama dos refugiados, mas já sem vida. O bote que a família usou para fugir do país em chamas partiu na noite de terça para quarta-feira -- 1º-2 de setembro de 2015 -- da península de Bodrum, no sudoeste da Turquia, com destino à ilha de Kos, na Grécia, mas jamais chegou ao seu destino. Junto com Aylan morreram seu irmão, Galib, de 5 anos, sua mãe, Rihan Kurdi, de 35 anos, e um jovem de 18 anos. Só duas pessoas foram resgatadas pela guarda costeira turca, uma delas o pai de Aylan, Abdulá Kurdi, que retornou à cidade natal -- Kobane, no norte da Síria -- com os corpos da mulher e dos filhos, para o funeral, ocorrido no dia 4 de setembro.
 
-== "Deixai toda esperança, ó vós que entrais"[^44]
+== "Deixai toda esperança, ó vós que entrais"
+[^44]
 
 > O Mediterrâneo é hoje túmulo de milhares de corpos sem nome, genericamente designados de "refugiados" ou ainda de "clandestinos", a representar um continente em movimento, independentemente do real lugar de origem. \[\...\] Nos últimos seis anos, mais de 40 mil pessoas perderam a vida tentando chegar às costas europeias: destas, mais de metade foram deixadas no fundo do mar. \[\...\] O Mediterrâneo, que condensa, no seu significado etimológico, a ideia de mediação e de contato, é hoje uma fronteira de água, carne e política, assim como de percursos migratórios inéditos, traçados pelo desespero das condições dos países de origem e pela violência da Fortaleza Europa. (PUSSETTI, 2017, p. 264)
 
@@ -84,11 +85,11 @@ Durante 5 anos, a mídia divulgou amplamente estatísticas sobre o número de mo
 
 O estudo de Slovic et al. (2017) examinou dados de pesquisas no Google para avaliar o efeito da fotografia de Aylan Kurdi, publicada em 2 de setembro de 2015, sobre o interesse e a preocupação do público sobre a crise dos refugiados sírios. Um desses efeitos refere-se a doações em dinheiro para a Cruz Vermelha para um fundo especificamente designado para ajudar os refugiados sírios. Segundo Slovic et al. (2017), essa campanha começou em 4 de agosto de 2015 e continuou até 30 de novembro de 2015. As doações aumentaram significativamente após a publicação da foto de Aylan. O número médio de doações diárias durante a semana após a publicação da foto foi mais de 100 vezes superior ao arrecadado na semana anterior. Esse efeito foi sustentado até 5 semanas depois do surgimento da foto. Da mesma forma, a quantidade média doada diariamente durante a semana após a publicação da foto foi 55 vezes maior em comparação com a semana anterior (Figura 24).
 
-![][48]
+// ![][48]
 
-![][49]
+// ![][49]
 
-[]{=_Ref496535363 .anchor}**Figura 24 -- Campanha da Cruz Vermelha para Refugiados Sírios**
+// []{=_Ref496535363 .anchor}**Figura 24 -- Campanha da Cruz Vermelha para Refugiados Sírios**
 
 Se, por um lado, esses dados ilustram o icônico efeito da foto, por outro, mostram que essa forma de empatia rapidamente arrefeceu e as doações diminuíram. Os autores descobriram que esse "desvanecimento da compaixão" pode começar quando um incidente envolvendo uma única pessoa se expande para duas pessoas. Em um estudo,[^54] os participantes foram convidados a fazer doações e a relatar como se sentiram sobre doar para uma única criança carente ou duas, ambas identificadas com fotografia, nome e idade. Sentimentos positivos sobre doar diminuíram quando o tamanho do grupo era de dois, e o declínio no sentimento foi preditivo de níveis mais baixos de doação. Daí a conclusão de que, se começamos a perder sentimento e resposta diante de duas pessoas, não é de admirar que experimentemos "entorpecimento psíquico" quando os números alcançam os milhares. Segundo os autores, pode ser natural e relativamente fácil simpatizar e sentir compaixão com um único indivíduo identificado, mas é difícil "expandir" essa emoção quando precisamos considerar mais de um indivíduo. Se alguém se sentir fortemente mal sobre uma pessoa em perigo, a aparência de um segundo indivíduo carente não levará ao dobro do nível de emoção.
 

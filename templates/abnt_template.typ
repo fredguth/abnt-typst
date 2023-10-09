@@ -1,11 +1,31 @@
-#import("../_config.typ"): *
+#import("../_config.typ"): config, metadados, estilo
 #import "@preview/chic-hdr:0.3.0": *
 // #import "@preview/anti-matter:0.0.2": anti-matter, anti-front-end, anti-inner-end, anti-thesis
 // #show: anti-matter.with(spec: (front: "i", inner: "1", back: "i"))
 
+//  Definições úteis =================================================
+#let base = (lang: "pt", fill: luma(10), tracking: 0pt, stretch: 100%, style: "normal")
+#let regular =(..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.regular)
+#let small = (..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.small, style: "italic")
+
+#let sans =(..regular, font: estilo.fonte.sans)
+#let mono =(..base, font: estilo.fonte.mono, weight: "regular", size: estilo.fonte.tamanho.tiny)
+
+#let h1 = (..base, font: estilo.fonte.sans, weight: "black",  size: estilo.fonte.tamanho.huge)
+#let h2 = (..h1, weight: "regular", size: estilo.fonte.tamanho.larger)
+#let h3 = (..h1, weight: "light", size: estilo.fonte.tamanho.large)
+#let h4 = (..h2, size: estilo.fonte.tamanho.regular)
+
+#let pagina_branca = () => [
+    #pagebreak()
+    #align(center+bottom, text(..small, [Página intencionalmente deixada em branco.]))
+    #pagebreak(to: "odd")
+]
+
+
+
 
 //  A ordem em que os elementos são definidos importa
-
 #let template = (body, config: config) => {
 
   let (metadados, estilo, estrutura,) = config
@@ -16,8 +36,9 @@
   // links e citações
   show link: it => text(fill: estilo.tema, it)
   show ref: it => text(fill: estilo.tema, it)
-  set cite(style: "alphanumerical")
+  // set cite(style: "alphanumerical")
   show cite: it => text(fill: estilo.tema, it)
+  set cite(style: "alphanumerical")
 
   include("./pre.typ")
   // anti-front-end()
@@ -35,10 +56,10 @@ set page(
 
 show: chic.with(
   even:(chic-header(
-    left-side: text(font: estilo.fonte.sans, style: "normal", fill:luma(100), [#chic-page-number()#h(1em)#upper(chic-heading-name())]),
+    left-side: text(size: 12pt, font: estilo.fonte.sans, style: "normal", fill:luma(100), [#chic-page-number()#h(1em)#upper(chic-heading-name())]),
     // right-side: text(font: estilo.fonte.sans, style: "normal", fill:luma(100), upper(chic-heading-name())),
     ),),
-  odd:(chic-header(right-side: text(font: estilo.fonte.sans, style: "normal", fill:luma(100), chic-page-number())),),
+  odd:(chic-header(right-side: text(size: 12pt, font: estilo.fonte.sans, style: "normal", fill:luma(100), chic-page-number())),),
   chic-height(on: "header", estilo.margens.superior)
 )
 
@@ -91,12 +112,12 @@ show heading: it => if (it.level==1){[
     #set text(fill: luma(50), font: estilo.fonte.sans, weight: "semibold", size: 1.2em * (1- 0.05 * it.level))
     #move(dx:-2cm, dy:.3cm, block(width:100%+2cm)[
       #grid(columns: (2cm, 1fr), rows: 1, gutter: 0pt,
-        align(right + bottom, pad(x:.15cm, text(weight: "medium", counter(heading).display()))),it.body)
+        align(right + bottom, pad(x:.25cm, text(weight: "medium", counter(heading).display()))),it.body)
     ])
     #v(1cm, weak: true)
   ]}
 
-set text(..base, font: estilo.fonte.serif, weight: "regular")
+set text(..regular)
 body
 // anti-inner-end()
 //  ==================MIOLO==================

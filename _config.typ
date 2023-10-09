@@ -5,33 +5,32 @@ contemporâneo",
     título-curto: none,
     codigo_cutter: "RR696n", //ex. S659n
     codigo_cdu: none,//ex. 911.375:028
-    tipo_trabalho: "Dissertação de Mestrado",
-    titulacao_objetivo: "Mestrado em Comunicação", //ex. "Tese de Doutorado", "Dissertação de Mestrado"
+    tipo_trabalho: "Dissertação de Mestrado", //ex. "Tese de Doutorado", "Dissertação de Mestrado", "Trabalho de Conclusão de Curso"
+    titulacao_objetivo: "Mestrado em Comunicação",
     programa_pos: "Programa de Pós Graduação em Comunicação", //ex. Ciência da Computação
-    Departamento: "Faculdade de Comunicação",
+    departamento: "Faculdade de Comunicação",
     autor: (nome: "Anna Cristina de Araújo Rodrigues", sobrenome_nome: "Rodrigues, Anna Cristina de Araújo"),
     publicacao: (
-      preambulo:"Dissertação apresentada como requisito para obtenção
-do título de mestre. Linha de Pesquisa: Imagem, Som e Escrita.
-
-Orientador: Prof. Dr. Sérgio Araújo de Sá" ,
+      preambulo:"Dissertação apresentada como requisito para obtenção do título de mestre. Linha de Pesquisa: Imagem, Som e Escrita." ,
       local: "Brasília",
       instituicao: "UnB",
       logo_instituicao: "../arquivos/logo_unb.svg",
       data: 2018,
-      palavras-chave: "\1. Fotografia .  2. Aylan Kurdi . 3. Imagem e imaginário . 4. Redes sociais . 5. Sociedade em rede. I. Araújo de Sá, Sérgio, orient. II. Título"
+      palavras-chave: "\1. Fotografia .  2. Aylan Kurdi . 3. Imagem e imaginário . 4. Redes sociais . 5. Sociedade em rede. I. Araújo de Sá, Sérgio, orient. II. Título" //ficha catalográfica
     ),
     //instituicoes de pessoas relacionadas ao trabalho academico
-    supervisao: ((
-      tipo: "Orientador",
-      nome: "Prof. Dr. Sérgio Araújo de Sá",
-      afiliacao: "",),(
-      tipo: "Coorientador",
-      nome: "Nome da pessoa",
-      afiliacao: "2",),(
-      tipo: "Banca",
-      nome: "Nome da pessoa",
-      afiliacao: "1",)),
+    supervisao: (
+      orientadores:(
+        ( chamar: "Orientador:"
+        ,   nome: "Sérgio Araújo de Sá"
+        , sobrenome_nome: "Sá, Sérgio Araújo de"
+        , titulo: "Prof. Dr."
+        ),
+      ),
+      coorientadores: none,
+      coordenador: none,
+      banca: none
+    )
 
   )
 
@@ -53,14 +52,15 @@ Orientador: Prof. Dr. Sérgio Araújo de Sá" ,
         // sans:"Helvetica",
         sans:"Lato",
         mono:"SF Mono",
+        // mono:"IBM 3270",
         tamanho:(normal: (size:1em)
             , large: 18pt
             , larger: 20pt
             , huge: 25pt
             , small: 10pt
             , tiny: 7pt
-            , corpo: 12pt
-            , regular:12pt
+            , corpo: 14pt
+            , regular:14pt
             ,
         ),
     ),
@@ -72,7 +72,7 @@ Orientador: Prof. Dr. Sérgio Araújo de Sá" ,
         // ABNT NBR 14724:2011 §5.2 - ESPAÇAMENTO
         // Todo texto deve ser digitado ou datilografado com espaçamento 1,5 entre linhas
         // entrelinhas: 1.5,
-        entrelinhas: 1,
+        entrelinhas: 1.2,
         entreparagrafos: 1.5,
         titulos: 3,
         ),
@@ -83,41 +83,6 @@ Orientador: Prof. Dr. Sérgio Araújo de Sá" ,
 
 
 
- // definições de fonte
- #let base = (lang: "pt", fill: luma(10), tracking: 0pt, stretch: 100%, style: "normal")
- #let regular =(..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.regular)
- #let sans =(..regular, font: estilo.fonte.sans)
- #let mono =(..base, font: estilo.fonte.mono, weight: "regular", size: estilo.fonte.tamanho.tiny)
-
- //luma é grayscale de 0 a 255
- #let h1 = (..base, font: estilo.fonte.sans, weight: "black",  size: estilo.fonte.tamanho.huge)
- #let h2 = (..h1, weight: "regular", size: estilo.fonte.tamanho.larger)
- #let h3 = (..h1, weight: "light", size: estilo.fonte.tamanho.large)
- #let h4 = (..h2, size: estilo.fonte.tamanho.regular)
- #let hdisplay = (..base, font: estilo.fonte.sans, weight: "medium", size: estilo.fonte.tamanho.small, tracking: estilo.fonte.tamanho.small/6 )
- #let small = (..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.small, style: "italic")
- #let hficha = (..base, font: estilo.fonte.mono, weight: "regular", size: estilo.fonte.tamanho.tiny)
-
-
-
-
- #let t1 = (..base, font: estilo.fonte.sans, weight: "black",  size: estilo.fonte.tamanho.huge)
- #let t2 = (..t1, weight: "regular", size: estilo.fonte.tamanho.larger)
- #let t3 = (..t1, weight: "light", size: estilo.fonte.tamanho.large)
- #let t4 = (..t2, size: estilo.fonte.tamanho.regular)
- #let display = (..base, font: estilo.fonte.sans, weight: "medium", size: estilo.fonte.tamanho.small, tracking: estilo.fonte.tamanho.small/6 )
-
-
-
-
-
-//  #let small = (..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.small, style: "italic")
-//  #let hficha = (..base, font: estilo.fonte.mono, weight: "regular", size: estilo.fonte.tamanho.tiny)
-#let pagina_branca = () => [
-    #pagebreak()
-    #align(center+bottom, text(..small, [Página intencionalmente deixada em branco.]))
-    #pagebreak(to: "odd")
-]
 
 #let config = (
   metadados: metadados,

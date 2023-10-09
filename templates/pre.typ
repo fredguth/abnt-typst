@@ -1,6 +1,24 @@
-#import "../_config.typ": metadados, estilo, t1, t2,t3, t4, mono, display, pagina_branca, regular, base
+#import "../_config.typ": metadados, estilo
 
+//  Definições úteis =================================================
+#let base = (lang: "pt", fill: luma(10), tracking: 0pt, stretch: 100%, style: "normal")
+#let regular =(..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.regular)
+#let small = (..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.small, style: "italic")
 
+#let sans =(..regular, font: estilo.fonte.sans)
+#let mono =(..base, font: estilo.fonte.mono, weight: "regular", size: estilo.fonte.tamanho.tiny)
+
+#let t1 = (..base, font: estilo.fonte.sans, weight: "black",  size: estilo.fonte.tamanho.huge)
+#let t2 = (..t1, weight: "regular", size: estilo.fonte.tamanho.larger)
+#let t3 = (..t1, weight: "light", size: estilo.fonte.tamanho.large)
+#let t4 = (..t2, size: estilo.fonte.tamanho.regular)
+#let display = (..base, font: estilo.fonte.sans, weight: "medium", size: estilo.fonte.tamanho.small, tracking: estilo.fonte.tamanho.small/6 )
+
+#let pagina_branca = () => [
+    #pagebreak()
+    #align(center+bottom, text(..small, [Página intencionalmente deixada em branco.]))
+    #pagebreak(to: "odd")
+]
 //  CAPA (obrigatório) ================================================
 
 // ABNT NBR 14724:2011 §4.1.1 - Capa
@@ -71,11 +89,11 @@
 #v(.5cm)
 #set text(..t4)
 #pad(left:5.7cm)[#metadados.publicacao.preambulo]
-#v(4.2cm)
+#v(4.5cm)
 #set text(..t3, size: estilo.fonte.tamanho.regular)
-#upper[Programa de Pós Graduação em Comunicação]
+#upper[#metadados.programa_pos]
 #v(-.1cm)
-#upper[Faculdade de Comunicação]
+#upper[#metadados.departamento]
 
 #place(bottom + center, bloco_rodape)
 #pagebreak()
@@ -89,46 +107,51 @@
 
 #set text(..mono)
 
+#let licenca = block(inset: 0pt, width: 12cm,
+    [
+        #metadados.titulo #sym.copyright #metadados.autor.nome licenciada sob os termos da Licença Creative Commons
+
+        *Atribuição-NãoComercial-SemDerivações 4.0 Internacional*
+
+        *CC BY-NC-ND 4.0 DEED*
+
+    #v(.4cm)
+
+    #grid(columns:(1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr), [],[],image("../arquivos/cc.svg", width: 1cm), image("../arquivos/Cc-by_new.svg", width:1cm),image("../arquivos/Cc-nc.svg", width: 1cm), image("../arquivos/Cc-nd.svg", width:1cm),[],[])
+    ])
+
+// !  Ficha não está funcionando para mais de um orientador e orientador/coorientador
+#let desc_trabalho = if ("Mestrado" in metadados.tipo_trabalho or "Mestrado" in metadados.titulacao_objetivo) [Dissertação (Mestrado - #metadados.titulacao_objetivo)] else if ("Tese" in metadados.tipo_trabalho or "Tese" in metadados.titulacao_objetivo) [Tese (Doutorado - #metadados.titulacao_objetivo)] else [#metadados.titulacao_objetivo]
+#let ficha = rect(width: 12cm, height: 7.5cm, inset: 0.5cm, [
+    #align(top + left, [
+        #grid(columns:(2cm, 1fr), [#linebreak() #metadados.codigo_cutter]
+            ,[
+                #set par(first-line-indent: 2em)
+                #metadados.autor.sobrenome_nome
+
+                #metadados.titulo #if (metadados.subtitulo != none){[: #metadados.subtitulo]} / #metadados.autor.nome ; orient. #metadados.supervisao.orientadores.at(0).nome -- #metadados.publicacao.local, #metadados.publicacao.data.
+
+                #let total_pages = locate(loc => counter(page).final(loc).at(0))
+                #total_pages p.
+
+                #desc_trabalho -- #metadados.publicacao.instituicao, #metadados.publicacao.data.
+
+                #metadados.publicacao.palavras-chave
+                #v(2cm)
+                #align(right+bottom, [#metadados.codigo_cdu])
+            ])
+        ])
+    ])
 // Licença de Uso  (opcional) -------------------------------
 #align(center + bottom, [
-    #block(
-  inset: 0pt,
-  width: 12cm,
-   [
-    #metadados.titulo #sym.copyright #metadados.autor.nome licenciada sob os termos da Licença Creative Commons
+    #licenca
+    #v(2cm)
 
-    *Atribuição-NãoComercial-SemDerivações 4.0 Internacional*
-
-    *CC BY-NC-ND 4.0 DEED*
-
-#v(.4cm)
-
-  #grid(columns:(1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr), [],[],image("../arquivos/cc.svg", width: 1cm), image("../arquivos/Cc-by_new.svg", width:1cm),image("../arquivos/Cc-nc.svg", width: 1cm), image("../arquivos/Cc-nd.svg", width:1cm),[],[])
-  #v(2cm)
-  ],
-)
 // Ficha Catalográfica (obrigatório) -----------------------------
-
-// Em geral, a biblioteca da universidade provê uma ficha catalográfica em pdf que deve ser
-// inserida no documento.  O template aqui atende a maioria das exigências.
-
-    #rect(width: 12cm, height: 7.5cm, inset: 0.5cm, [
-        #align(top + left, [
-#grid(columns:(2cm, 1fr), [#linebreak() #metadados.codigo_cutter],
-    [#set par(first-line-indent: 2em)
-        #metadados.autor.sobrenome_nome
-
-        #metadados.titulo #if (metadados.subtitulo != none){[: #metadados.subtitulo]} / #metadados.autor.nome ; *orientador Sérgio Araújo de Sá.* -- #metadados.publicacao.local, #metadados.publicacao.data.
-
-        *115 p.*
-
-        *Dissertação (Mestrado - Mestrado em Comunicação)* -- #metadados.publicacao.instituicao, #metadados.publicacao.data.
-
-        \1. Fotografia .  2. Aylan Kurdi . 3. Imagem e imaginário . 4. Redes sociais . 5. Sociedade em rede. I. Araújo de Sá, Sérgio, orient. II. Título
-        #v(2cm)
-        #align(right+bottom, [CDU 657])
-    ])])
-    ])])
+    // Em geral, a biblioteca da universidade provê uma ficha catalográfica em pdf que deve ser
+    // inserida no documento.  O template aqui atende a maioria das exigências.
+    #ficha
+])
 #pagebreak(to: "odd")
 
 // Folha de Aprovação (obrigatório) =============================
