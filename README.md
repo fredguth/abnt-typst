@@ -49,6 +49,6 @@ Parte externa
 
 [^1]: A nomenclatura dos títulos dos elementos textuais fica a critério do autor.
 
-- [NBR 10520:2002](https://www.udesc.br/arquivos/udesc/documentos/Capacita__o_CITA__ES_E_REFER_NCIAS__1__16230946858293_4769.pdf)
+- [NBR 10520:2002](http://www2.uesb.br/biblioteca/wp-content/uploads/2016/05/NBR-10520-CITA%C3%87%C3%95ES.pdf)
 - [NBR 14724:2011](http://site.ufvjm.edu.br/revistamultidisciplinar/files/2011/09/NBR_14724_atualizada_abr_2011.pdf)
 - [NBR 6027:2003](https://arquivos.info.ufrn.br/arquivos/201217724681f092705070edeef8a06d/NBR_6027_Sumario_apresentacao.pdf)

@@ -47,7 +47,8 @@ contemporâneo",
 
     fonte:(
         // serif:"Times New Roman",
-        serif:"STIX Two Text",
+        // serif:"STIX Two Text",
+        serif:"Libre Caslon Text",
         // sans:"TeX Gyre Heros",
         // sans:"Helvetica",
         sans:"Lato",

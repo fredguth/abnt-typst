@@ -19,6 +19,10 @@
     #align(center+bottom, text(..small, [Página intencionalmente deixada em branco.]))
     #pagebreak(to: "odd")
 ]
+
+#let blockquote = (q) => par(leading:0.63em, text(font: estilo.fonte.serif, weight: "regular", size: 90%*estilo.fonte.tamanho.regular, align(right+bottom, pad(left: 4cm, q))))
+#let strong = (q) => text(weight: 600, q)
+
 //  CAPA (obrigatório) ================================================
 
 // ABNT NBR 14724:2011 §4.1.1 - Capa
@@ -178,10 +182,14 @@ Folha de Aprovação
 // ABNT NBR 14724:2011 §4.2.1.4 - Dedicatória
 // Elemento opcional. Deve ser inserida após a folha de aprovação.
 
-#set text(font: estilo.fonte.serif, weight: "regular", style: "oblique", size: estilo.fonte.tamanho.regular)
-#align(right+bottom, pad(left: 7cm, [
-    Dedico este trabalho aos meus pais, Juju e Ismael; aos meus irmãos, Ismael, Márcia e Marta; aos meus filhos, Júlia, Adriano e Felipe; ao meu marido, José Romero; e à minha neta Luísa.
-]))
+// #set text(font: estilo.fonte.serif, weight: "regular", style: "oblique", size: estilo.fonte.tamanho.regular)
+// #align(right+bottom, pad(left: 7cm, [
+//     Dedico este trabalho aos meus pais, Juju e Ismael; aos meus irmãos, Ismael, Márcia e Marta; aos meus filhos, Júlia, Adriano e Felipe; ao meu marido, José Romero; e à minha neta Luísa.
+// ]))
+#blockquote[
+#emph[Dedico este trabalho aos meus pais, Juju e Ismael; aos meus irmãos, Ismael, Márcia e Marta; aos meus filhos, Júlia, Adriano e Felipe; ao meu marido, José Romero; e à minha neta Luísa.]
+]
+
 #pagina_branca()
 
 // Agradecimentos (opcional) =============================
@@ -189,22 +197,18 @@ Folha de Aprovação
 // ABNT NBR 14724:2011 §4.2.1.5 - Agradecimentos
 // Elemento opcional. Devem ser inseridos após a dedicatória.
 #set par(
-    leading: estilo.espacamento.entrelinhas * estilo.fonte.tamanho.regular,
+    leading: .63em,
     justify: true,
-    first-line-indent: 0em,)
-//  set par(
-//     leading: 1em,
-//     justify: true,
-//     first-line-indent: 2em,)
+    first-line-indent: 0em,
+    )
 
-#show par: set block(spacing: estilo.espacamento.entreparagrafos * estilo.fonte.tamanho.regular)
+// #show par: set block(spacing: estilo.espacamento.entreparagrafos * estilo.fonte.tamanho.regular)
 
 #set text(..t2, weight:"black")
 Agradecimentos
-#v(1.5cm)
+#v(1cm)
 #set text(..regular)
-
-Agradeço à Universidade de Brasília, onde tive a honra de fazer meu primeiro curso de graduação e desde então tornou-se uma referência de grande importância na minha vida. E à Faculdade de Comunicação -- professores, direção, coordenação e servidores da pós-graduação --, por me receber e oferecer todas as condições para concluir o mestrado com tranquilidade e segurança.
+Agradeço à Universidade de Brasília, onde tive a honra de fazer meu primeiro curso de graduação e desde então tornou-se uma referência de grande importância na minha vida. E à Faculdade de Comunicação – professores, direção, coordenação e servidores da pós-graduação –, por me receber e oferecer todas as condições para concluir o mestrado com tranquilidade e segurança.
 
 Agradeço ao meu orientador, Professor Doutor Sérgio Araújo de Sá, pela disposição em me conduzir ao longo de dois anos de estudo e pesquisa, sempre disponível para o diálogo, para a discussão, para a indicação de autores e textos que tornaram possível a compreensão do meu objeto de estudo.
 
@@ -220,22 +224,22 @@ Ao meu marido, agradeço de maneira especial, pela paciência infinita e pelo ap
 
 A todos e a cada um de vocês, meu muito obrigada!
 
-// ![][2]
-
-> *Na sociedade dos meios de comunicação de massa, o pensamento vê-se atrelado à imagem. Quantas vezes não relacionamos o que nossos olhos veem com imagens já vistas?*
-
-Sérgio de Sá
-
 #pagina_branca()
 
+
 // Epígrafe (opcional) ==================================
+
 // ABNT NBR 14724:2011 §4.2.1.6 - Epígrafe
 // Elemento opcional. Elaborada conforme a ABNT NBR 10520. Deve ser inserida após os agradecimentos.
 // Podem também constar epígrafes nas folhas ou páginas de abertura das seções primárias.
-#set text(..t2, weight:"black")
-Epígrafe
+
+#align(center, image("../arquivos/image3.jpg", width: 3.960774278215223in, height: 2.970580708661417in))
+
+#blockquote[#emph[Na sociedade dos meios de comunicação de massa, o pensamento vê-se atrelado à imagem. Quantas vezes não relacionamos o que nossos olhos veem com imagens já vistas?]
+
+--- Sérgio de Sá]
 #pagina_branca()
-#v(1.5cm)
+
 
 // Resumo (obrigtório)===============================
 
@@ -244,19 +248,19 @@ Epígrafe
 #set text(..t2, weight:"black")
 Resumo
 #set text(..regular)
-#v(1.5cm)
+#v(1cm)
 A fotografia de Aylan Kurdi, menino sírio de 3 anos de idade morto numa praia da Turquia em 2 de setembro de 2015, chocou o mundo e tornou-se símbolo da atual crise migratória que tem gerado milhões de refugiados. Essa fotografia inspirou um movimento artístico nas redes sociais digitais que reproduziu, em forma de ilustrações, a imagem de Aylan morto na praia e transformou o tema "refugiados" em um dos assuntos mais discutidos na internet em 2015. Trouxe também mais uma vez a discussão sobre o poder transformador da imagem, sobretudo da fotografia icônica. Propõe-se discutir o suposto estatuto transformador da imagem e identificar os elementos presentes na fotografia de Aylan Kurdi responsáveis por inquietar o mundo em favor e contra os refugiados, bem como as características de uma sociedade em que as tecnologias digitais criam condições para que os indivíduos atuem ativamente na propagação de conteúdos, alterando irreversivelmente a forma como nos comunicamos. Por meio de leitura de imagem, do estudo do imaginário e da sociedade em rede, e com uso de metodologia qualitativa, procedeu-se à análise das reproduções artísticas da fotografia de Aylan, sustentada em teóricos dos campos estudados. A pesquisa recuperou a trajetória da imagem e do imaginário no Ocidente e localizou no tempo e no espaço o drama dos refugiados, com destaque para a guerra civil na Síria, bem como associou tais aspectos à emergência da sociedade em rede e das tecnologias digitais que põe em xeque as formas tradicionais de exercício do poder, uma vez que esse exercício depende do controle da comunicação. Constatou que a imagem em estudo inquietou indivíduos e grupos, gerou iniciativas empáticas transitórias em defesa dos refugiados, mas divide a opinião de estudiosos do tema sobre seu poder transformador. Concluiu que a sociedade digital nos obriga a rever o conhecimento construído ao longo dos últimos séculos, considerando que vivemos em contexto radicalmente diferente, o que exige mais que a histórica iconoclastia e a desconfiança quanto ao poder da imagem.
 
-*Palavras-chave*: Imagem e imaginário; Fotografia icônica; Aylan Kurdi; Redes sociais; comunicação mediada.
+#strong[Palavras-chave]: Imagem e imaginário; Fotografia icônica; Aylan Kurdi; Redes sociais; comunicação mediada.
 // Abstract ==================================
 #pagebreak()
 #set text(..t2, weight:"black")
 Abstract
-#v(1.5cm)
+#v(1cm)
 #set text(..regular)
 The photo of Aylan Kurdi, a 3-year-old Syrian boy killed on a beach in Turkey on September 2, 2015, shocked the world and became a symbol of the current migratory crisis that has generated millions of refugees. This photograph inspired an artistic movement in digital social media that reproduced, in the form of illustrations, the image of Aylan dead on the beach and turned the theme \"refugees\" into one of the most discussed subjects on the internet in 2015. It also brought once more discussion about the transforming power of the image, especially iconic photography. This study proposes to discuss the supposed transforming status of the image and identify the elements in the photograph of Aylan Kurdi responsible for disturbing the world in favor of and against refugees, as well as the characteristics of a society in which digital technologies create the conditions for individuals to actively engage in the propagation of content, irreversibly altering the way in which we communicate. Through reading of image, the study of the imaginary and of network society, and using a qualitative methodology, we proceeded to the analysis of reproductions of Aylan\'s photography, supported by the work of academics of the fields mentioned above. The research recovered the trajectory of the image and the imaginary in the West and localized in time and space the drama of refugees, with emphasis on civil war in Syria. It also associated these aspects to the emergence of the network society and digital technologies that challenge traditional forms of power, since this exercise depends on the control of communication. We found that the studied image disturbed individuals and groups, generated transitional empathetic initiatives in defense of refugees, but divides the view of scholars of the theme about its transforming power. It concluded that the digital society compels us to review the knowledge built over the last centuries, considering that we live in a radically different context, which requires more than the historical iconoclasm and distrust of the power of the image.
 
-*Keywords*: Image and imaginary; Iconic photography; Aylan Kurdi; Social media; mediated communication.
+#strong[Keywords]: Image and imaginary; Iconic photography; Aylan Kurdi; Social media; mediated communication.
 
 #pagebreak()
 // Listas ====================================
@@ -289,8 +293,8 @@ The photo of Aylan Kurdi, a 3-year-old Syrian boy killed on a beach in Turkey o
 // c) números das páginas em que se distribui o texto (exemplo: 27, 35, 64 ou 27-30, 35-38, 64-70).
 // 5.5 Se houver um único sumário, podem ser colocadas traduções dos títulos após os títulos originais, separados por barra oblíqua ou travessão.
 // 5.6 Se o documento for apresentado em mais de um idioma, para o mesmo texto, recomenda-se um sumário separado para cada idioma, inclusive a palavra sumário, em páginas distintas.
-#set text(..t4, font: estilo.fonte.serif, size: 14pt)
-#outline(depth: 2, title: none)
+#set text(..t4, size: 12pt)
+#outline(depth: 2, title: none, indent: auto)
 // #outline(depth: 2)
 // #pagina_branca()
 

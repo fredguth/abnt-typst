@@ -5,6 +5,9 @@
 
 //  Definições úteis =================================================
 #let base = (lang: "pt", fill: luma(10), tracking: 0pt, stretch: 100%, style: "normal")
+// #let regular =(..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.regular)
+// #let small = (..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.small, style: "italic")
+
 #let regular =(..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.regular)
 #let small = (..base, font: estilo.fonte.serif, weight: "regular", size: estilo.fonte.tamanho.small, style: "italic")
 
@@ -21,6 +24,15 @@
     #align(center+bottom, text(..small, [Página intencionalmente deixada em branco.]))
     #pagebreak(to: "odd")
 ]
+
+
+// NBR - 10520
+// As citações diretas, no texto, com mais de três linhas, devem ser destacadas com recuo de 4 cm da margem esquerda,
+// com letra menor que a do texto utilizado e sem as aspas. No caso de documentos datilografados, deve-se observar apenas
+// o recuo
+#let blockquote = (q) => par(leading:0.63em, text(font: estilo.fonte.serif, weight: "regular", size: 90%*estilo.fonte.tamanho.regular, align(right+bottom, pad(left: 4cm, q))))
+
+// =========================
 
 
 //  A ordem em que os elementos são definidos importa
@@ -91,7 +103,10 @@ show math.equation: set block(spacing: 1em)
   // poderíamos aqui definir subseção:
   // ([Capítulo], [Seção], [Subseção]).at(it.level -1, default: [Seção]) )
 
-set heading(numbering: estilo.numeracao.titulos, supplement: it => ([capítulo], [seção]).at(it.level -1, default: [seção]) )
+// set heading(numbering: estilo.numeracao.titulos, supplement: it => ([capítulo], [seção]).at(it.level -1, default: [seção]) )
+// set heading(numbering: estilo.numeracao.titulos)
+let sup = (it) => {if it.has("level") {([capítulo], [seção]).at(it.level -1, default: [seção])} else {}}
+set heading(numbering: estilo.numeracao.titulos, supplement: sup)
 
 // Definindo cada nível de heading (título)
 show heading: it => if (it.level==1){[
