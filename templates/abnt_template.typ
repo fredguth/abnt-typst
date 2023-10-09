@@ -23,8 +23,6 @@
 ]
 
 
-
-
 //  A ordem em que os elementos são definidos importa
 #let template = (body, config: config) => {
 

@@ -1,11 +1,13 @@
 #pagebreak(to:"odd")
-= Introdução <intro>
+// #heading(numbering: none, [])
+// #heading(numbering: none, [Introdução])
+= Introdução
 
 A questão central do projeto de pesquisa que deu origem ao presente estudo, desenvolvido no Programa de Pós-Graduação em Comunicação -- Mestrado, na linha de pesquisa Imagem, Som e Escrita, refere-se à fotografia de Aylan Kurdi, menino sírio de 3 anos de idade, encontrado morto em uma praia da Turquia no dia 2 de setembro de 2015, em decorrência da fuga malfadada de sua família em busca de se salvar da guerra civil que assola a Síria desde 2011.
 
 
 
-Depois  de @intro um pedido de asilo negado pelo governo do Canadá, a família Kurdi resolveu atravessar o Mediterrâneo em um barco inflável com destino à Europa; o barco naufragou na costa turca; três membros dessa família morreram -- entre eles, Aylan; Nilüfer Demir, fotógrafa da agência Dogan, capturou a imagem de Aylan morto na praia; e a foto foi distribuída pela Reuters Ancara/DHA ainda em 2 de setembro de 2015.
+Depois  de um pedido de asilo negado pelo governo do Canadá, a família Kurdi resolveu atravessar o Mediterrâneo em um barco inflável com destino à Europa; o barco naufragou na costa turca; três membros dessa família morreram -- entre eles, Aylan; Nilüfer Demir, fotógrafa da agência Dogan, capturou a imagem de Aylan morto na praia; e a foto foi distribuída pela Reuters Ancara/DHA ainda em 2 de setembro de 2015.
 
 Essa fotografia alcançou a primeira página de diversos jornais do mundo inteiro e milhões de usuários de redes sociais; despertou a indignação da audiência; transformou-se em símbolo da atual crise de refugiados; e se desdobrou em dezenas de imagens nascidas no seio de um movimento social digital que trouxe para a discussão a empatia de que ainda somos capazes, a despeito do individualismo[^1] tão característico da contemporaneidade.
 
@@ -39,8 +41,6 @@ Para nos aprofundarmos nos conteúdos a que nos propusemos em cada capítulo, ut
 Não poderíamos ignorar que as imagens com as quais estamos lidando são difundidas pela mídia, por isso "encontram-se onipresentes em todos os níveis de representação e da psique do homem ocidental ou ocidentalizado" [@durand1996 p. 32]. Essas imagens midiáticas nos acompanham permanentemente e é mais que necessário compreender seu papel como fenômeno fundamental de nossa sociedade e a revolução cultural que seu surgimento implicou. Para isso, nos apoiaremos em Castells e em sua teoria do poder da comunicação, como caminho para apreender a sociedade em rede e suas novas formas de organização econômica, social, política, cultural e tecnológica. 
 
 O papel da fotografia na comunicação não é assunto novo, mas esta pesquisa procura ir além dessa discussão, já que =o mundo hiperconsumista, hipertecnicizado e hiperconectado transformou indelevelmente a forma como nos comunicamos, aumentando a influência da sociedade civil e dos atores sociopolíticos não institucionais em diversos setores da vida em sociedade. Como já adiantado, a ampliação da habilidade de atores individuais de se manifestar sobre todos os temas de interesse para a humanidade passa pela evolução tecnológica dos últimos 40 anos, mas, conforme Castells (2015, p. 34), "nenhuma tecnologia determina coisa alguma, uma vez que processos sociais estão incorporados em um conjunto complexo de relações sociais".
-
-No @intro, vimos que....
 
 Nesse sentido, tentar compreender um fenômeno midiático como a superexposição das imagens de Aylan Kurdi, considerando esse conjunto complexo de relações, é uma forma não exatamente nova de pensar a comunicação, mas certamente bastante atual de abordá-la. O fato de artistas reagirem à imagem fotográfica, produzindo mais e mais imagens e distribuindo-as para o mundo inteiro via internet é, também, um fenômeno típico dos tempos que correm: 
 
