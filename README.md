@@ -1,51 +1,51 @@
-# tufte-typst
+# ABNT-Typst
+Um template de documento abnt para dissertações e teses.
+_em construção!_
 
-A Tufte inspired template for Typst
-
-## Usage
-
-there is an example in the `./example` directory. Run from root directory with:
+## Uso
 
 ```sh
 
-typst watch example/main.typ --root .
+typst watch tese_abnt.typ --root .
 ```
 
-## Example
+## Exemplo
 
-![example/main.pdf](./example/main.pdf)
+![tese_abnt.pdf](./tese_abnt.pdf)
 
-= Estrutura
+## Estrutura
+
 
 Parte externa
 
-- Capa (obrigatório)
-- Lombada (opcional)
-  Parte interna
-- Elementos pré-textuais
-  -- Folha de rosto (obrigatório)
-  -- Errata (opcional)
-  -- Folha de aprovação (obrigatório)
-  -- Dedicatória (opcional)
-  -- Agradecimentos (opcional)
-  -- Epígrafe (opcional)
-  -- Resumo na língua vernácula (obrigatório)
-  -- Resumo em língua estrangeira (obrigatório)
-  -- Lista de ilustrações (opcional)
-  -- Lista de tabelas (opcional)
-  -- Lista de abreviaturas e siglas (opcional)
-  -- Lista de símbolos (opcional)
-  -- Sumário (obrigatório)
-- Elementos textuais [^1]
-  -- Introdução
-  -- Desenvolvimento
-  -- Conclusão
-- Elementos pós-textuais
-  -- Referências (obrigatório)
-  -- Glossário (opcional)
-  -- Apêndice (opcional)
-  -- Anexo (opcional)
-  -- Índice (opcional)
+- [x] Capa (obrigatório)
+- [ ] Lombada (opcional)
+
+Parte interna
+ Elementos pré-textuais
+- [x] Folha de rosto (obrigatório)
+- [ ] Errata (opcional)
+- [ ] Folha de aprovação (obrigatório)
+- [x] Dedicatória (opcional)
+- [x] Agradecimentos (opcional)
+- [x] Epígrafe (opcional)
+- [x] Resumo na língua vernácula (obrigatório)
+- [x] Resumo em língua estrangeira (obrigatório)
+- [ ] Lista de ilustrações (opcional)
+- [ ] Lista de tabelas (opcional)
+- [ ] Lista de abreviaturas e siglas (opcional)
+- [ ] Lista de símbolos (opcional)
+- [x] Sumário (obrigatório)
+Elementos textuais [^1]
+- [x] Introdução
+- [x] Desenvolvimento
+- [x] Conclusão
+Elementos pós-textuais
+- [x] Referências (obrigatório)
+- [ ] Glossário (opcional)
+- [ ] Apêndice (opcional)
+- [ ] Anexo (opcional)
+- [ ] Índice (opcional)
 
 [^1]: A nomenclatura dos títulos dos elementos textuais fica a critério do autor.
 
