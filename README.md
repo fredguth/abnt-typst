@@ -11,7 +11,7 @@ typst watch tese_abnt.typ --root .
 
 ## Exemplo
 
-![PDF exemplo](https://github.com/fredguth/abnt-typst/tese_abnt.pdf)
+![PDF exemplo](https://github.com/fredguth/abnt-typst/blob/main/tese_abnt.pdf)
 
 ## Estrutura
 
