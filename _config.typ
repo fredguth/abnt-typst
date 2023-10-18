@@ -61,7 +61,7 @@ contemporâneo",
             , small: 10pt
             , tiny: 7pt
             , corpo: 14pt
-            , regular:14pt
+            , regular:12pt
             ,
         ),
     ),

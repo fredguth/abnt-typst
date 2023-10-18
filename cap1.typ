@@ -1,6 +1,7 @@
 #import("_config.typ"): config, metadados, estilo
 #let blockquote = (q) => block(spacing: 1.5cm, par(leading:0.63em, text(font: estilo.fonte.serif, weight: "regular", size: 90%*estilo.fonte.tamanho.regular, align(right+bottom, pad(left: 4cm, q)))))
 #pagebreak(to:"odd")
+
 #heading(numbering: none, [Introdução])
 
 A questão central do projeto de pesquisa que~deu origem ao presente estudo, desenvolvido no Programa de Pós-Graduação em Comunicação – Mestrado, na linha de pesquisa Imagem, Som e Escrita,~refere-se à fotografia de Aylan Kurdi, menino sírio de 3 anos de idade, encontrado morto em uma praia da Turquia no dia 2 de setembro de 2015, em decorrência da fuga malfadada de sua família em busca de se salvar da guerra civil que assola a Síria desde 2011
@@ -13,7 +14,7 @@ O~poder da imagem de veicular experiências coletivas é, como se observa, assun
 
 Antes, porém, de partir para discussões sobre os impactos da fotografia de Aylan Kurdi sobre diferentes setores da sociedade, vamos nos deter em conceitos fundamentais para compreensão do objeto da pesquisa, como imagem e imaginário. A pergunta inicial que nos fizemos, então, foi:~o que é uma imagem?
 
-Para~Joly (2012):
+Para~@joly2012introducao:
 
 #blockquote[
 \[...\]~parece que imagem pode ser tudo e seu contrário – visual e imaterial, fabricada e~“natural”, real e virtual, móvel e imóvel, sagrada e profana, antiga e contemporânea, vinculada à vida e à morte, analógica, comparativa, convencional, expressiva, comunicativa, construtora e destrutiva, benéfica e ameaçadora. (JOLY, 2012, p. 27)~
