@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:virgilinojuca/csl-abnt.git
+	branch = master
+	commit = 585cf7e15b8567733db13cb5fe8865445dc17814
+	parent = 8da4ab23233c1607876cbd7b324947d5bba42316
+	method = merge
+	cmdver = 0.4.5
